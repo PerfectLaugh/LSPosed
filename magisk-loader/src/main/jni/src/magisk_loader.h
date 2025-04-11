@@ -54,6 +54,8 @@ protected:
 private:
     bool skip_ = false;
     const lsplant::InitInfo initInfo = lsplant::InitInfo{
+        .generated_class_name = ARTHOOKER_CLASS_NAME,
+        .generated_field_name = ARTHOOKER_FIELD_NAME,
         .inline_hooker =
             [](auto t, auto r) {
                 void *bk = nullptr;

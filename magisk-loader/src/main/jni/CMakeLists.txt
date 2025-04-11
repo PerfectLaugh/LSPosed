@@ -17,6 +17,11 @@ target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 target_link_libraries(${PROJECT_NAME} core log)
 
+string(RANDOM ARTHOOKER_CLASS_NAME)
+string(RANDOM ARTHOOKER_FIELD_NAME)
+target_compile_definitions(${PROJECT_NAME} PRIVATE ARTHOOKER_CLASS_NAME="a${ARTHOOKER_CLASS_NAME}")
+target_compile_definitions(${PROJECT_NAME} PRIVATE ARTHOOKER_FIELD_NAME="a${ARTHOOKER_FIELD_NAME}")
+
 if (DEFINED DEBUG_SYMBOLS_PATH)
     set(DEBUG_SYMBOLS_PATH ${DEBUG_SYMBOLS_PATH}/${API})
     message(STATUS "Debug symbols will be placed at ${DEBUG_SYMBOLS_PATH}")

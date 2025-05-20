@@ -48,7 +48,6 @@ std::map<const std::string, std::string> signatures = {
         { "Lorg/lsposed/lspd/core/", "" },
         { "Lorg/lsposed/lspd/nativebridge/", "" },
         { "Lorg/lsposed/lspd/service/", "" },
-        { "Lorg/lsposed/", "" },
 };
 
 jclass class_file_descriptor;
